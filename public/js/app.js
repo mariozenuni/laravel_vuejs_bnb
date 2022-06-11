@@ -29115,7 +29115,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c(
       "div",
-      { staticClass: "col-md-8 pb-4", staticStyle: { padding: "1rem 1rem" } },
+      { staticClass: "col-md-8 pb-4" },
       [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-body" }, [
