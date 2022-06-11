@@ -44,9 +44,11 @@
 
 <script>
 export default {
+    
 props: {
     bookableId: String
 },
+
     //v-on:click="check"
     data(){
         return {

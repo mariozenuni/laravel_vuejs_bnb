@@ -6,7 +6,10 @@
                   <div class=" border-bottom d-none d-md-block"  v-for="(review, index) in reviews" :key=index >
                 <div class="row">
                     <div class="col-md-6">Mario Zenuni</div>
-                     <div class="col-md-6 d-flex justify-content-end ">{{review.rating}}</div>
+                     <div class="col-md-6 d-flex justify-content-end ">{{review.rating}}
+                        <star-rating></star-rating>
+
+                     </div>
                 </div>
                 <div class="row pt-4">
                     <div class="col-md-12">
@@ -24,10 +27,15 @@
 
 <script>
 
+
+
 export default {
+
    props: {
        bookableId : String
    },
+
+
     //initialising the data method end defining the object's properties
     data(){
         return{
