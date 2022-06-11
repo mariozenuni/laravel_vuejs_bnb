@@ -11,10 +11,10 @@
                 <div v-else>Loading...</div>
               </div>
             </div>
-            <review-list></review-list>
+            <review-list :bookable-id="this.$route.params.id"></review-list>
         </div>
          <div class="col-md-4">
-             <Availability></Availability>
+             <Availability :bookable-id="this.$route.params.id"></Availability>
         </div>
     </div>
 </template>
@@ -41,10 +41,8 @@ export default {
         //console.log(this.$route.params.id);
         //template string `/api/bookables/${this.$route.params.id}`
     axios.get(`/api/bookables/${this.$route.params.id}`)
-    .then(response => {
-        this.bookable = response.data.data
-        this.loading=false;
-        });
+    .then(response => this.bookable = response.data.data )
+    .then(()=> this.loading = false);
  
     }
 }   
