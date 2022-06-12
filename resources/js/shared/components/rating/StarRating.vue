@@ -16,11 +16,24 @@ export default {
             return false;
         },
          fullStar(){
-            return 4;
+            return Math.round(this.rating);
         },
          emptyStar(){
             return 1;
         }
+    },
+ 
+    created() {
+         const numbers = [0.9,4.3,4.4,4.5];
+
+         numbers.forEach(n => {
+             
+             console.log(`round for ${n} is ${Math.round(n)}`);
+             console.log(`floor for ${n} is ${Math.floor(n)}`);
+             console.log(`ceil for ${n} is ${Math.ceil(n)}`);
+          console.log('============================================');
+         
+         })
     }
 }
 </script>

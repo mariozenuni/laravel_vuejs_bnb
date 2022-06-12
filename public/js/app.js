@@ -5664,11 +5664,20 @@ __webpack_require__.r(__webpack_exports__);
       return false;
     },
     fullStar: function fullStar() {
-      return 4;
+      return Math.round(this.rating);
     },
     emptyStar: function emptyStar() {
       return 1;
     }
+  },
+  created: function created() {
+    var numbers = [0.9, 4.3, 4.4, 4.5];
+    numbers.forEach(function (n) {
+      console.log("round for ".concat(n, " is ").concat(Math.round(n)));
+      console.log("floor for ".concat(n, " is ").concat(Math.floor(n)));
+      console.log("ceil for ".concat(n, " is ").concat(Math.ceil(n)));
+      console.log('============================================');
+    });
   }
 });
 
@@ -50990,7 +50999,7 @@ var render = function () {
                     { staticClass: "col-md-6 d-flex justify-content-end " },
                     [
                       _vm._v(_vm._s(review.rating) + "\n                    "),
-                      _c("star-rating"),
+                      _c("star-rating", { attrs: { rating: review.rating } }),
                     ],
                     1
                   ),
