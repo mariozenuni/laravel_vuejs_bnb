@@ -46,7 +46,7 @@
 export default {
     
 props: {
-    bookableId: String
+    bookableId: Number
 },
 
     //v-on:click="check"
