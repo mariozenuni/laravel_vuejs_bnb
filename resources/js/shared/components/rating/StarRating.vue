@@ -13,7 +13,10 @@ export default {
     },
     computed:{
         halfStar(){
-            return  Math.round((Math.floor(this.rating) - this.rating)*100) ;
+           const franction= Math.round(
+               (this.rating - Math.floor(this.rating))*100
+               );
+            return franction > 0 && franction < 50;
         },
          fullStar(){
             return Math.round(this.rating);

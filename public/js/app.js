@@ -5661,7 +5661,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     halfStar: function halfStar() {
-      return Math.round((Math.floor(this.rating) - this.rating) * 100);
+      var franction = Math.round((this.rating - Math.floor(this.rating)) * 100);
+      return franction > 0 && franction < 50;
     },
     fullStar: function fullStar() {
       return Math.round(this.rating);
