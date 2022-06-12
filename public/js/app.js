@@ -5661,24 +5661,24 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     halfStar: function halfStar() {
-      return false;
+      return Math.round((Math.floor(this.rating) - this.rating) * 100);
     },
     fullStar: function fullStar() {
       return Math.round(this.rating);
     },
     emptyStar: function emptyStar() {
-      return 1;
+      return 5 - Math.ceil(this.rating);
     }
-  },
-  created: function created() {
-    var numbers = [0.9, 4.3, 4.4, 4.5];
-    numbers.forEach(function (n) {
-      console.log("round for ".concat(n, " is ").concat(Math.round(n)));
-      console.log("floor for ".concat(n, " is ").concat(Math.floor(n)));
-      console.log("ceil for ".concat(n, " is ").concat(Math.ceil(n)));
-      console.log('============================================');
-    });
-  }
+  } // created() {
+  //      const numbers = [0.9,2.2,4.3,4.4,4.5];
+  //      numbers.forEach(n => {
+  //          console.log(`round for ${n} is ${Math.round(n)}`);
+  //          console.log(`floor for ${n} is ${Math.floor(n)}`);
+  //          console.log(`ceil for ${n} is ${Math.ceil(n)}`);
+  //       console.log('============================================');
+  //      })
+  // }
+
 });
 
 /***/ }),
