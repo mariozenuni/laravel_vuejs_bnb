@@ -5,7 +5,7 @@
                 <div class="card-body" >
                      <div v-if="!loading">
                     <h2>{{bookable.title}}</h2>
-                    <hr/>
+                    <hr />
                     <article>{{bookable.description}}</article>
                     </div>
                 <div v-else>Loading...</div>
