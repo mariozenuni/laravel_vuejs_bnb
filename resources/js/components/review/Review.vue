@@ -7,7 +7,7 @@
           
           <div class="form-group">
                 <label for="content" class="text-muted">Describe your experince with</label>
-                <textarea name="content"  cols="30" rows="10" class="form-control"></textarea>
+                <textarea name="content"  cols="30" rows="10" class="form-control" v-model="review.content"></textarea>
           </div>
 
           <button class="btn btn-lg btn-primary col-12 mt-2">Submit</button>
